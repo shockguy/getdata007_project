@@ -21,9 +21,9 @@ names(trainsub)<-"subject"
 names(testact)<-"activityNumber"
 names(trainact)<-"activityNumber"
 
-#The next 2 code blocks accomplish 3 and 4 of the problem statement
+#The next 2 code blocks accomplish steps 3 and 4 of the problem statement
 #Read in "features.txt" file for naming of data columns and apply to dataframes
-features<-read.table("../dataset/features.txt",nrows=561)
+features<-read.table("./dataset/features.txt",nrows=561)
 colnames<-as.vector(features$V2, mode="character")
 names(testd)<-colnames
 names(traind)<-colnames
