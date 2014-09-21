@@ -2,7 +2,19 @@ getdata007_proj
 ===============
 This codebook describes the data in project_upload.txt.  The file contained 81 variables and 180 lines.  The file is comma delimited. 
 
-This data file was produced with an R script called run_analysis.R.  This data contains the means of the means and standard deviations from the results of a motion capture study using the sensors of a smartphone.  The original data and a summary of the work can be found here:
+This data file was produced with an R script called run_analysis.R.  This data contains the means of the means and standard deviations from the results of a motion capture study using the sensors of a smartphone:
+==================================================================
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+==================================================================
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+================================================================== 
+The original data and a summary of the work can be found here:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 And the original data here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -27,7 +39,48 @@ The direction of movement for a given variable in indicated by the X,Y, or Z suf
 
 The remaining characters in the variable names indicate if specific measurement, and if the measurement was in the time or frequency domain.  The an “f” after the “avg-“ indicates a frequency measurement, and a “t” indicates a time based measurement.
 
-The remaining core of the variable name is determined with this key:
+The remaining core of the variable name is described by information from the original study:
+————————————
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+——————————————
+
+Here is an example of deciphering a measurement variable name:
+   avg-tBodyAcc-std()-X
+     | |    |     |   |
+     | |    |     |   X direction
+     | |    |     Standard deviation
+     | |    Core measurement, Body Acceleration
+     | Time domain measurement
+     Average of the original measurement on a per activity and per subject basis   
+
+Units
+===========
+No information on units was given in the information accompanying the original dataset
 
 
 
