@@ -15,7 +15,7 @@ The script then creates another dataframe, “all_avgs”, which is the mean of 
 “all_avgs” is then written out as “project_upload.txt.”  This output file is written to the working directory.  It is plain text, and the entries are separated with commas.  The first line is a header contain the variable names.
 
 NOTE TO PEER EVALUATORS:
-The the exact contents of project_upload.txt is open to interpretation. This is based on indications by class TA's [2][3], and extensive discussion in the forums.  It may not be exactly what you have, but that does not make it wrong. Summaries of the output from R are below.
+The exact contents of final dataset in project_upload.txt is open to interpretation. This is based on indications by class TA's [2][3], and extensive discussion in the forums.  It may not be exactly what you have, but that does not make it wrong. Summaries of the output from R are below.
 
 To execute the script:
 1) Place run_analysis.R in a working directory and unzip the data set available here in to the working directory. 'dataset' name of the directory that should contain the extracted zip files.

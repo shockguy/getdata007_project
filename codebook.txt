@@ -1,1 +1,35 @@
-For the most part the data columns use the names from the original codebook.  These could be more clearly "descriptive", but there was a desire to conform to the original names so for the sake of consistency so downstream others could work backwards to the origin of the data if necessary. Note that the data is in a directory called "dataset", which should reside in the script working directory.  I chose to "dataset" because the directory the zip created for the data was too messy for my tastes.
+getdata007_proj
+===============
+This codebook describes the data in project_upload.txt.  The file contained 81 variables and 180 lines.  The file is comma delimited. 
+
+This data file was produced with an R script called run_analysis.R.  This data contains the means of the means and standard deviations from the results of a motion capture study using the sensors of a smartphone.  The original data and a summary of the work can be found here:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+And the original data here:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+For the most part the data columns use the names from the original codebook. These could be more clearly "descriptive", but there was a desire to conform to the original names for the sake of consistency, and so  that others downstream could work backwards to the origin of the data if necessary. 
+
+The first to columns are variables “activity” and “subject”.  These are specific activities performed by specific subjects.  The subjects numerical identifiers of 1 to 30. Subjects were between 19 and 48 years of age. Activities are descriptively named, and were handled in R processing as factors.
+
+Activity and subject factors are the basis for averages of the rest of the variables, i.e. each entry for a variable is the average of measurements for a specific subject at a specific activity.  These entries were produced using the R function mean() on the mean and standard deviation columns for both time and frequency measurement of the source data.  
+
+There were 6 activities: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+Measurement variables names
+===========================
+The 79 columns of measurement variables are means of variables from the sources data, and this is indicated by the prepended “avg-“ on the 79 measurement variables.  “avg-“ indicates an “average” value.
+
+The direction of movement for a given variable in indicated by the X,Y, or Z suffix on each of the 79 measurement variables.
+
+“std()” in a variable names indicates that the value came from standard deviation measurements in the source data.
+
+“mean()” in a variable name indicates that the value came from means of measurements in the source data.
+
+The remaining characters in the variable names indicate if specific measurement, and if the measurement was in the time or frequency domain.  The an “f” after the “avg-“ indicates a frequency measurement, and a “t” indicates a time based measurement.
+
+The remaining core of the variable name is determined with this key:
+
+
+
+
+ 
