@@ -1,4 +1,4 @@
-Discussion on the subjectiviity of the final dataset in forums
+Discussion on the subjectivity of the final dataset in forums
 	Title: David's project FAQ
 		Heading: what columns are measurements on the mean and standard deviation
 		Link: https://class.coursera.org/getdata-007/forum/thread?thread_id=49#post-114
